@@ -87,10 +87,10 @@
 		8EBB6808228356EB00E4CD51 = {
 			isa = PBXGroup;
 			children = (
-				8EBB6813228356EB00E4CD51 /* Mercher */,
-				8EBB6812228356EB00E4CD51 /* Products */,
-				1E387397FF4F3A6DC962CF21 /* Pods */,
 				5FDC1FB52BF1131027108F69 /* Frameworks */,
+				8EBB6813228356EB00E4CD51 /* Mercher */,
+				1E387397FF4F3A6DC962CF21 /* Pods */,
+				8EBB6812228356EB00E4CD51 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
