@@ -19,8 +19,19 @@
 		8EBB6881228375F200E4CD51 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB6880228375F200E4CD51 /* ProductCollectionViewCell.swift */; };
 		8EBB6883228376CF00E4CD51 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EBB6882228376CF00E4CD51 /* ProductCell.xib */; };
 		8EBB68852283794300E4CD51 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB68842283794300E4CD51 /* Product.swift */; };
+		C5A8403A2284A47C005EC605 /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A840392284A47C005EC605 /* BasketTests.swift */; };
 		F1BB0741BF077845FC6A8F87 /* Pods_Basket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1026E4B49E73C339ECDCC2 /* Pods_Basket.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5A8403C2284A47C005EC605 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EBB6809228356EB00E4CD51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EBB684E22835ACB00E4CD51;
+			remoteInfo = Basket;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		263C38880A38F01C3ACF5BB5 /* Pods_MercherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +57,9 @@
 		8EBB6882228376CF00E4CD51 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		8EBB68842283794300E4CD51 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C4FAF37F28DC0EC7899BBF71 /* Pods_Mercher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mercher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5A840372284A47C005EC605 /* BasketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5A840392284A47C005EC605 /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
+		C5A8403B2284A47C005EC605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C798BD703603DFD8F642B43C /* Pods-Basket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Basket/Pods-Basket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +69,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1BB0741BF077845FC6A8F87 /* Pods_Basket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5A840342284A47C005EC605 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +108,7 @@
 		8EBB6808228356EB00E4CD51 = {
 			isa = PBXGroup;
 			children = (
+				C5A840382284A47C005EC605 /* BasketTests */,
 				5FDC1FB52BF1131027108F69 /* Frameworks */,
 				8EBB6813228356EB00E4CD51 /* Mercher */,
 				1E387397FF4F3A6DC962CF21 /* Pods */,
@@ -98,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8EBB684F22835ACB00E4CD51 /* Basket.app */,
+				C5A840372284A47C005EC605 /* BasketTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +226,15 @@
 			path = Basket;
 			sourceTree = "<group>";
 		};
+		C5A840382284A47C005EC605 /* BasketTests */ = {
+			isa = PBXGroup;
+			children = (
+				C5A840392284A47C005EC605 /* BasketTests.swift */,
+				C5A8403B2284A47C005EC605 /* Info.plist */,
+			);
+			path = BasketTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,6 +258,24 @@
 			productReference = 8EBB684F22835ACB00E4CD51 /* Basket.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C5A840362284A47C005EC605 /* BasketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5A8403E2284A47C005EC605 /* Build configuration list for PBXNativeTarget "BasketTests" */;
+			buildPhases = (
+				C5A840332284A47C005EC605 /* Sources */,
+				C5A840342284A47C005EC605 /* Frameworks */,
+				C5A840352284A47C005EC605 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5A8403D2284A47C005EC605 /* PBXTargetDependency */,
+			);
+			name = BasketTests;
+			productName = BasketTests;
+			productReference = C5A840372284A47C005EC605 /* BasketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -238,6 +288,10 @@
 				TargetAttributes = {
 					8EBB684E22835ACB00E4CD51 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					C5A840362284A47C005EC605 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 8EBB684E22835ACB00E4CD51;
 					};
 				};
 			};
@@ -255,6 +309,7 @@
 			projectRoot = "";
 			targets = (
 				8EBB684E22835ACB00E4CD51 /* Basket */,
+				C5A840362284A47C005EC605 /* BasketTests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,6 +323,13 @@
 				8EBB6883228376CF00E4CD51 /* ProductCell.xib in Resources */,
 				8EBB687322835B1C00E4CD51 /* Assets.xcassets in Resources */,
 				8EBB687522835B2900E4CD51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5A840352284A47C005EC605 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +407,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C5A840332284A47C005EC605 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A8403A2284A47C005EC605 /* BasketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5A8403D2284A47C005EC605 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EBB684E22835ACB00E4CD51 /* Basket */;
+			targetProxy = C5A8403C2284A47C005EC605 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8EBB6818228356EB00E4CD51 /* Main.storyboard */ = {
@@ -521,6 +599,46 @@
 			};
 			name = Release;
 		};
+		C5A8403F2284A47C005EC605 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7836M9296;
+				INFOPLIST_FILE = BasketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdtalert.BasketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basket.app/Basket";
+			};
+			name = Debug;
+		};
+		C5A840402284A47C005EC605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7836M9296;
+				INFOPLIST_FILE = BasketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mdtalert.BasketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basket.app/Basket";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -538,6 +656,15 @@
 			buildConfigurations = (
 				8EBB686D22835ACC00E4CD51 /* Debug */,
 				8EBB686E22835ACC00E4CD51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5A8403E2284A47C005EC605 /* Build configuration list for PBXNativeTarget "BasketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5A8403F2284A47C005EC605 /* Debug */,
+				C5A840402284A47C005EC605 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

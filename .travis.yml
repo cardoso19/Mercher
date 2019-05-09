@@ -2,5 +2,5 @@ os: osx
 osx_image: xcode10.2
 language: swift
 xcode_workspace: Mercher.xcworkspace
-xcode_scheme: Mercher
+xcode_scheme: Basket
 xcode_sdk: iphonesimulator12.2
