@@ -1,0 +1,6 @@
+framework module Pods_Basket {
+  umbrella header "Pods-Basket-umbrella.h"
+
+  export *
+  module * { export * }
+}
