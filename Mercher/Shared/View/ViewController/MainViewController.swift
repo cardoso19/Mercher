@@ -19,14 +19,6 @@ class MainViewController: UIViewController {
     let viewModel: MainViewModel = MainViewModel()
     let disposeBag: DisposeBag = DisposeBag()
     
-    //MARK: Layout
-    func render() {
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-    }
-    
     //MARK: Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +38,17 @@ class MainViewController: UIViewController {
         collectionViewProducts.setCollectionViewLayout(flowLayout, animated: true)
         collectionViewProducts.register(UINib(nibName: "ProductCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionCell")
         viewModel.state.productCollection.bind(to: collectionViewProducts.rx.items(cellIdentifier: "ProductCollectionCell", cellType: ProductCollectionViewCell.self)) { (index, model, cell) in
+            
         }.disposed(by: disposeBag)
-        
     }
-
 }
 
+//MARK: - Whitelabel
+extension MainViewController: Whitelabel {
+    func render() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+}

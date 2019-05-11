@@ -8,6 +8,9 @@
 
 import Foundation
 
-struct Product {
-    let name: String?
+struct Product: Codable {
+    
+    //MARK: - Variables
+    let identifier: Identifier<Product>
+    let name: Name<Product>
 }

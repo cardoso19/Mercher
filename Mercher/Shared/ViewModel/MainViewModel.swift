@@ -14,7 +14,18 @@ class MainViewModel {
     
     //MARK: State Variables
     struct State {
-        let productCollection: BehaviorRelay = BehaviorRelay<[Product]>(value: [Product(name: "Pão"),Product(name: "Queijo"),Product(name: "Presunto"),Product(name: "Geleia"),Product(name: "Linguiça"),Product(name: "Farofa")])
+        let productCollection: BehaviorRelay = BehaviorRelay<[Product]>(value: [Product(identifier: Identifier<Product>(value: 0),
+                                                                                        name: Name<Product>(value: "Pão")),
+                                                                                Product(identifier: Identifier<Product>(value: 1),
+                                                                                        name: Name<Product>(value: "Queijo")),
+                                                                                Product(identifier: Identifier<Product>(value: 2),
+                                                                                        name: Name<Product>(value: "Presunto")),
+                                                                                Product(identifier: Identifier<Product>(value: 3),
+                                                                                        name: Name<Product>(value: "Geleia")),
+                                                                                Product(identifier: Identifier<Product>(value: 4),
+                                                                                        name: Name<Product>(value: "Linguiça")),
+                                                                                Product(identifier: Identifier<Product>(value: 5),
+                                                                                        name: Name<Product>(value: "Farofa"))])
     }
     
     //MARK: Variables
