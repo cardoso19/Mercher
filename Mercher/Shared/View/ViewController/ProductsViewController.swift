@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  ProductsViewController.swift
 //  Mercher
 //
 //  Created by Davi Bispo de Oliveira Alves on 08/05/19.
@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MainViewController: UIViewController {
+class ProductsViewController: UIViewController {
 
     //MARK: IBOutlet
     @IBOutlet weak var collectionViewProducts: UICollectionView!
@@ -44,7 +44,7 @@ class MainViewController: UIViewController {
 }
 
 //MARK: - Whitelabel
-extension MainViewController: Whitelabel {
+extension ProductsViewController: Whitelabel {
     func render() {
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.isTranslucent = false

@@ -12,7 +12,6 @@
 		8EBB687422835B2000E4CD51 /* Mercher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB681B228356EB00E4CD51 /* Mercher.xcdatamodeld */; };
 		8EBB687522835B2900E4CD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBB6818228356EB00E4CD51 /* Main.storyboard */; };
 		8EBB687622835B2C00E4CD51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBB6820228356EC00E4CD51 /* LaunchScreen.storyboard */; };
-		8EBB687722835B3000E4CD51 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB6816228356EB00E4CD51 /* MainViewController.swift */; };
 		8EBB687922835B4300E4CD51 /* AppString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB6845228358AE00E4CD51 /* AppString.swift */; };
 		8EBB687B22835DAE00E4CD51 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB687A22835DAE00E4CD51 /* MainViewModel.swift */; };
 		8EBB6881228375F200E4CD51 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB6880228375F200E4CD51 /* ProductCollectionViewCell.swift */; };
@@ -40,6 +39,8 @@
 		AF791C912287553F00879915 /* ColorCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF791C902287553F00879915 /* ColorCodable.swift */; };
 		AF791C93228755A900879915 /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF791C92228755A900879915 /* ColorUtil.swift */; };
 		AF791C9522875AA900879915 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF791C9422875AA900879915 /* ViewUtil.swift */; };
+		AF791C972287682400879915 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF791C962287682400879915 /* ProductsViewController.swift */; };
+		AF791C9D22876C6400879915 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF791C9F22876C6400879915 /* Localizable.strings */; };
 		C5A8403A2284A47C005EC605 /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A840392284A47C005EC605 /* BasketTests.swift */; };
 		F1BB0741BF077845FC6A8F87 /* Pods_Basket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1026E4B49E73C339ECDCC2 /* Pods_Basket.framework */; };
 /* End PBXBuildFile section */
@@ -63,7 +64,6 @@
 		7908C8B11A3B5CB0B25EA8C3 /* Pods-Basket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Basket/Pods-Basket.debug.xcconfig"; sourceTree = "<group>"; };
 		8825054949964965BABF81F8 /* Pods-Mercher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mercher/Pods-Mercher.debug.xcconfig"; sourceTree = "<group>"; };
 		8EBB6814228356EB00E4CD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EBB6816228356EB00E4CD51 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8EBB6819228356EB00E4CD51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EBB681C228356EB00E4CD51 /* Mercher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mercher.xcdatamodel; sourceTree = "<group>"; };
 		8EBB681E228356EC00E4CD51 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedAssets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +97,11 @@
 		AF791C902287553F00879915 /* ColorCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCodable.swift; sourceTree = "<group>"; };
 		AF791C92228755A900879915 /* ColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		AF791C9422875AA900879915 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
+		AF791C962287682400879915 /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		AF791C9822876A9400879915 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		AF791C9922876A9400879915 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		AF791C9E22876C6400879915 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AF791CA022876C6F00879915 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C4FAF37F28DC0EC7899BBF71 /* Pods_Mercher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mercher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A840372284A47C005EC605 /* BasketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A840392284A47C005EC605 /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
@@ -181,6 +186,7 @@
 				8EBB6814228356EB00E4CD51 /* AppDelegate.swift */,
 				8EBB681E228356EC00E4CD51 /* SharedAssets.xcassets */,
 				AF791C63228721D300879915 /* Font */,
+				AF791C9A22876C1200879915 /* Localizable */,
 				8EBB683B228357A500E4CD51 /* Model */,
 				AF791C7F2287422800879915 /* Util */,
 				8EBB68392283579B00E4CD51 /* View */,
@@ -234,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				AF791C6122871E1000879915 /* ListTableViewController.swift */,
-				8EBB6816228356EB00E4CD51 /* MainViewController.swift */,
+				AF791C962287682400879915 /* ProductsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -343,6 +349,14 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		AF791C9A22876C1200879915 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				AF791C9F22876C6400879915 /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		C5A840382284A47C005EC605 /* BasketTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +432,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 8EBB6808228356EB00E4CD51;
 			productRefGroup = 8EBB6812228356EB00E4CD51 /* Products */;
@@ -444,6 +459,7 @@
 				AF791C6D228721EE00879915 /* Roboto-Light.ttf in Resources */,
 				AF791C70228721EE00879915 /* Roboto-MediumItalic.ttf in Resources */,
 				AF791C6F228721EE00879915 /* Roboto-Regular.ttf in Resources */,
+				AF791C9D22876C6400879915 /* Localizable.strings in Resources */,
 				AF791C73228721EE00879915 /* Roboto-Black.ttf in Resources */,
 				8EBB687322835B1C00E4CD51 /* SharedAssets.xcassets in Resources */,
 				8EBB687522835B2900E4CD51 /* Main.storyboard in Resources */,
@@ -508,8 +524,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF791C8D2287489400879915 /* Whitelabel.swift in Sources */,
+				AF791C972287682400879915 /* ProductsViewController.swift in Sources */,
 				AF791C7E228741A400879915 /* DateCodable.swift in Sources */,
-				8EBB687722835B3000E4CD51 /* MainViewController.swift in Sources */,
 				AF791C93228755A900879915 /* ColorUtil.swift in Sources */,
 				AF791C912287553F00879915 /* ColorCodable.swift in Sources */,
 				8EBB68852283794300E4CD51 /* Product.swift in Sources */,
@@ -554,6 +570,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8EBB6819228356EB00E4CD51 /* Base */,
+				AF791C9922876A9400879915 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -562,8 +579,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				8EBB6821228356EC00E4CD51 /* Base */,
+				AF791C9822876A9400879915 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AF791C9F22876C6400879915 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF791C9E22876C6400879915 /* en */,
+				AF791CA022876C6F00879915 /* pt-BR */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -573,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -634,6 +662,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -697,7 +726,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.arkd.Basket;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.arkd.Basket.mdt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -716,7 +745,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.arkd.Basket;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.arkd.Basket.mdt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

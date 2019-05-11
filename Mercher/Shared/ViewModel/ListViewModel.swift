@@ -33,7 +33,10 @@ class ListViewModel {
     }
     
     func described(amount: NSNumber?) -> String {
-        return "$\(amount?.doubleValue ?? 0)"
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.current
+        formatter.numberStyle = .currency
+        return formatter.string(from: amount ?? 0.0) ?? "$\(amount?.doubleValue ?? 0)"
     }
     
     func gradient(with color: UIColor) -> [CGColor] {
