@@ -13,7 +13,7 @@
 		8EBB687522835B2900E4CD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBB6818228356EB00E4CD51 /* Main.storyboard */; };
 		8EBB687622835B2C00E4CD51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBB6820228356EC00E4CD51 /* LaunchScreen.storyboard */; };
 		8EBB687922835B4300E4CD51 /* AppString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB6845228358AE00E4CD51 /* AppString.swift */; };
-		8EBB687B22835DAE00E4CD51 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB687A22835DAE00E4CD51 /* MainViewModel.swift */; };
+		8EBB687B22835DAE00E4CD51 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB687A22835DAE00E4CD51 /* ProductsViewModel.swift */; };
 		8EBB6881228375F200E4CD51 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB6880228375F200E4CD51 /* ProductCollectionViewCell.swift */; };
 		8EBB6883228376CF00E4CD51 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EBB6882228376CF00E4CD51 /* ProductCell.xib */; };
 		8EBB68852283794300E4CD51 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB68842283794300E4CD51 /* Product.swift */; };
@@ -41,6 +41,8 @@
 		AF791C9522875AA900879915 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF791C9422875AA900879915 /* ViewUtil.swift */; };
 		AF791C972287682400879915 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF791C962287682400879915 /* ProductsViewController.swift */; };
 		AF791C9D22876C6400879915 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF791C9F22876C6400879915 /* Localizable.strings */; };
+		AF791CA42287B5AC00879915 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF791CA32287B5AC00879915 /* PlaceOrderViewController.swift */; };
+		AF791CA62287B74400879915 /* PlaceOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF791CA52287B74400879915 /* PlaceOrderViewModel.swift */; };
 		C5A8403A2284A47C005EC605 /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A840392284A47C005EC605 /* BasketTests.swift */; };
 		F1BB0741BF077845FC6A8F87 /* Pods_Basket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1026E4B49E73C339ECDCC2 /* Pods_Basket.framework */; };
 /* End PBXBuildFile section */
@@ -71,7 +73,7 @@
 		8EBB6845228358AE00E4CD51 /* AppString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppString.swift; sourceTree = "<group>"; };
 		8EBB684F22835ACB00E4CD51 /* Basket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBB686022835ACC00E4CD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../Basket/Info.plist; sourceTree = "<group>"; };
-		8EBB687A22835DAE00E4CD51 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8EBB687A22835DAE00E4CD51 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 		8EBB6880228375F200E4CD51 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EBB6882228376CF00E4CD51 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		8EBB68842283794300E4CD51 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -98,11 +100,10 @@
 		AF791C92228755A900879915 /* ColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		AF791C9422875AA900879915 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
 		AF791C962287682400879915 /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
-		AF791C9822876A9400879915 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		AF791C9922876A9400879915 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		AF791C9E22876C6400879915 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AF791CA022876C6F00879915 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		AF791CA22287A0C300879915 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		AF791CA32287B5AC00879915 /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
+		AF791CA52287B74400879915 /* PlaceOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewModel.swift; sourceTree = "<group>"; };
 		C4FAF37F28DC0EC7899BBF71 /* Pods_Mercher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mercher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A840372284A47C005EC605 /* BasketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A840392284A47C005EC605 /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
@@ -220,7 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				AF791C8E22874C1800879915 /* ListViewModel.swift */,
-				8EBB687A22835DAE00E4CD51 /* MainViewModel.swift */,
+				AF791CA52287B74400879915 /* PlaceOrderViewModel.swift */,
+				8EBB687A22835DAE00E4CD51 /* ProductsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				AF791C6122871E1000879915 /* ListTableViewController.swift */,
+				AF791CA32287B5AC00879915 /* PlaceOrderViewController.swift */,
 				AF791C962287682400879915 /* ProductsViewController.swift */,
 			);
 			path = ViewController;
@@ -524,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF791CA62287B74400879915 /* PlaceOrderViewModel.swift in Sources */,
 				AF791C8D2287489400879915 /* Whitelabel.swift in Sources */,
 				AF791C972287682400879915 /* ProductsViewController.swift in Sources */,
 				AF791C7E228741A400879915 /* DateCodable.swift in Sources */,
@@ -543,8 +547,9 @@
 				AF791C812287424300879915 /* DateUtil.swift in Sources */,
 				AF791C8F22874C1800879915 /* ListViewModel.swift in Sources */,
 				8EBB687222835B1A00E4CD51 /* AppDelegate.swift in Sources */,
+				AF791CA42287B5AC00879915 /* PlaceOrderViewController.swift in Sources */,
 				AF791C882287462F00879915 /* Identifier.swift in Sources */,
-				8EBB687B22835DAE00E4CD51 /* MainViewModel.swift in Sources */,
+				8EBB687B22835DAE00E4CD51 /* ProductsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,8 +576,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8EBB6819228356EB00E4CD51 /* Base */,
-				AF791C9922876A9400879915 /* pt-BR */,
-				AF791CA22287A0C300879915 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -581,7 +584,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8EBB6821228356EC00E4CD51 /* Base */,
-				AF791C9822876A9400879915 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

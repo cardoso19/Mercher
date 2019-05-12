@@ -25,8 +25,8 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var labelLastUpdateValue: UILabel!
     @IBOutlet weak var labelTotalItemsTitle: UILabel!
     @IBOutlet weak var labelTotalItemsValue: UILabel!
-    @IBOutlet weak var labelPaybleAmountTitle: UILabel!
-    @IBOutlet weak var labelPaybleAmountValue: UILabel!
+    @IBOutlet weak var labelPayableAmountTitle: UILabel!
+    @IBOutlet weak var labelPayableAmountValue: UILabel!
     
     @IBOutlet weak var imageViewUser: UIImageView!
     

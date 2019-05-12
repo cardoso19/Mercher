@@ -13,4 +13,7 @@ struct Product: Codable {
     //MARK: - Variables
     let identifier: Identifier<Product>
     let name: Name<Product>
+    let urlIcon: String?
+    let value: NSNumberCodable
+    var quantity: Int
 }

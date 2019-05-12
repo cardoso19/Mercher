@@ -6,5 +6,17 @@
   Copyright © 2019 Arkd. All rights reserved.
 */
 
+// Lists
+"My Lists" = "Minhas Listas";
+"Due Date" = "Data de Vencimento";
+"Delay By" = "Atrasado por";
+"Last Update" = "Última atualização";
+"Total Items" = "Total de Itens";
+"Payable Amount" = "Valor à Pagar";
+"Place Order" = "Fazer Pedido";
 "Day" = "Dia";
 "Days" = "Dias";
+
+//Place Order
+"Cart Summary" = "Resumo do carrinho";
+"Total Amount" = "Valor Total";

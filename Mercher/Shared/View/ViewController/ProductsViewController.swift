@@ -16,7 +16,7 @@ class ProductsViewController: UIViewController {
     @IBOutlet weak var collectionViewProducts: UICollectionView!
     
     //MARK: Variables
-    let viewModel: MainViewModel = MainViewModel()
+    let viewModel: ProductsViewModel = ProductsViewModel()
     let disposeBag: DisposeBag = DisposeBag()
     
     //MARK: Life Cicle
