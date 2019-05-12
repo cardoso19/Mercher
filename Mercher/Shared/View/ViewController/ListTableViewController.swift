@@ -42,6 +42,7 @@ class ListTableViewController: UITableViewController {
     func observerCellForRow() {
         viewModel.lists.bind(to: tableView.rx.items(cellIdentifier: "List", cellType: ListTableViewCell.self)) { index, data, cell in
             cell.viewList.add(cornerRadius: self.viewModel.cornerRadius)
+            cell.imageViewUser.add(cornerRadius: self.viewModel.roudedCorner(on: cell.imageViewUser.bounds))
             cell.viewListDetail.add(cornerRadius: self.viewModel.cornerRadius, on: self.viewModel.cornersDetail)
             cell.viewList.backgroundColor = .white
             if let color = data.color.value {

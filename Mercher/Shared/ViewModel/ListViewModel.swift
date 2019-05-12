@@ -25,7 +25,13 @@ class ListViewModel {
     }
     
     func described(days: Int) -> String {
-        return String(format: "%.2d", days) + " days"
+        let dayText: String!
+        if days == 1 {
+            dayText = NSLocalizedString("Day", comment: "")
+        } else {
+            dayText = NSLocalizedString("Days", comment: "")
+        }
+        return String(format: "%.2d", days) + " " + dayText
     }
     
     func described(totalItems: Int) -> String {
@@ -33,14 +39,20 @@ class ListViewModel {
     }
     
     func described(amount: NSNumber?) -> String {
+        let errorResponse = "$ -"
+        guard let amount = amount else { return errorResponse }
         let formatter = NumberFormatter()
         formatter.locale = Locale.current
         formatter.numberStyle = .currency
-        return formatter.string(from: amount ?? 0.0) ?? "$\(amount?.doubleValue ?? 0)"
+        return formatter.string(from: amount) ?? errorResponse
     }
     
     func gradient(with color: UIColor) -> [CGColor] {
         return [color.cgColor, color.withAlphaComponent(0.7).cgColor]
+    }
+    
+    func roudedCorner(on bouds: CGRect) -> CGFloat {
+        return bouds.width / 2
     }
     
     func mockLists() {
@@ -60,7 +72,7 @@ class ListViewModel {
                 color = ColorCodable(value: #colorLiteral(red: 0.2196078431, green: 0.7803921569, blue: 0.7607843137, alpha: 1))
             }
             lists.append(List(identifier: Identifier<List>(value: index),
-                              name: Name<List>(value: "List \(index)"),
+                              name: Name<List>(value: "List Name of Number \(index)"),
                               color: color,
                               urlImageUser: nil,
                               dueDate: DateCodable(value: Date().dateByAdding(days: 30)),

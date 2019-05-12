@@ -1,21 +1,21 @@
 
 /* Class = "UILabel"; text = "Payble Amount"; ObjectID = "0a3-jt-DBi"; */
-"0a3-jt-DBi.text" = "Valor à Pagar";
+"0a3-jt-DBi.text" = "Payable Amount";
 
 /* Class = "UILabel"; text = "2 Feb 2018"; ObjectID = "4XH-Pc-8wA"; */
 "4XH-Pc-8wA.text" = "2 Feb 2018";
 
 /* Class = "UINavigationItem"; title = "Products"; ObjectID = "6Vz-Qp-HIQ"; */
-"6Vz-Qp-HIQ.title" = "Produtos";
+"6Vz-Qp-HIQ.title" = "Products";
 
 /* Class = "UILabel"; text = "Last Update"; ObjectID = "6Yg-mz-gje"; */
-"6Yg-mz-gje.text" = "Última Atualização";
+"6Yg-mz-gje.text" = "Last Update";
 
 /* Class = "UILabel"; text = "47"; ObjectID = "8rq-78-o3L"; */
 "8rq-78-o3L.text" = "47";
 
 /* Class = "UILabel"; text = "Due Date"; ObjectID = "9lW-W4-SUD"; */
-"9lW-W4-SUD.text" = "Data de Vencimento";
+"9lW-W4-SUD.text" = "Due Date";
 
 /* Class = "UILabel"; text = "List Name Created by User"; ObjectID = "B3F-R0-F2f"; */
 "B3F-R0-F2f.text" = "List Name Created by User";
@@ -27,19 +27,19 @@
 "M8d-XZ-sBR.text" = "14 Days";
 
 /* Class = "UINavigationItem"; title = "My Lists"; ObjectID = "agx-Mc-BRq"; */
-"agx-Mc-BRq.title" = "Minhas Listas";
+"agx-Mc-BRq.title" = "My Lists";
 
 /* Class = "UILabel"; text = "Total Items"; ObjectID = "brw-A3-Bim"; */
-"brw-A3-Bim.text" = "Total de itens";
+"brw-A3-Bim.text" = "Total Items";
 
 /* Class = "UILabel"; text = "$840"; ObjectID = "cs6-uB-y8Y"; */
 "cs6-uB-y8Y.text" = "$840";
 
 /* Class = "UIButton"; normalTitle = "Place Order"; ObjectID = "d4B-M7-DcH"; */
-"d4B-M7-DcH.normalTitle" = "Fazer pedido";
+"d4B-M7-DcH.normalTitle" = "Place Order";
 
 /* Class = "UIButton"; normalTitle = "..."; ObjectID = "i3S-I1-2ar"; */
 "i3S-I1-2ar.normalTitle" = "...";
 
 /* Class = "UILabel"; text = "Delay By"; ObjectID = "pcv-VA-1gv"; */
-"pcv-VA-1gv.text" = "Atrasado por";
+"pcv-VA-1gv.text" = "Delay By";
