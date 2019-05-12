@@ -4,3 +4,7 @@ language: swift
 xcode_workspace: Mercher.xcworkspace
 xcode_scheme: Mercher
 xcode_sdk: iphonesimulator12.2
+
+before_install:
+  - pod repo update
+  
