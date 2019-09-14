@@ -8,9 +8,8 @@
 
 import UIKit
 
-class List: Codable {
+struct List: Codable {
     
-    //MARK: - Variables
     var identifier: Identifier<List>
     var name: Name<List>
     var color: ColorCodable
@@ -20,17 +19,4 @@ class List: Codable {
     var lastUpdate: DateCodable
     var totalItems: Int
     var paybleAmount: NSNumberCodable
-    
-    //MARK: - Life Cycle
-    init(identifier: Identifier<List>, name: Name<List>, color: ColorCodable, urlImageUser: String?, dueDate: DateCodable, delayBy: Int, lastUpdate: DateCodable, totalItems: Int, paybleAmount: NSNumberCodable) {
-        self.identifier = identifier
-        self.name = name
-        self.color = color
-        self.urlImageUser = urlImageUser
-        self.dueDate = dueDate
-        self.delayBy = delayBy
-        self.lastUpdate = lastUpdate
-        self.totalItems = totalItems
-        self.paybleAmount = paybleAmount
-    }
 }

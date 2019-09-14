@@ -16,17 +16,18 @@ class ProductsViewController: UIViewController {
     @IBOutlet weak var collectionViewProducts: UICollectionView!
     
     //MARK: Variables
-    let viewModel: ProductsViewModel = ProductsViewModel()
-    let disposeBag: DisposeBag = DisposeBag()
+    let viewModel: ProductsViewModelLogic = ProductsViewModel()
+    let disposeBag = DisposeBag()
     
-    //MARK: Life Cicle
+    //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         observers()
         render()
+        viewModel.requestProducts()
     }
     
-    //MARK: Functions
+    //MARK: - Bind
     func observers() {
         collectionView()
     }
@@ -37,7 +38,7 @@ class ProductsViewController: UIViewController {
         flowLayout.itemSize = CGSize(width: size, height: 300)
         collectionViewProducts.setCollectionViewLayout(flowLayout, animated: true)
         collectionViewProducts.register(UINib(nibName: "ProductCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionCell")
-        viewModel.state.productCollection.bind(to: collectionViewProducts.rx.items(cellIdentifier: "ProductCollectionCell", cellType: ProductCollectionViewCell.self)) { (index, model, cell) in
+        viewModel.products.bind(to: collectionViewProducts.rx.items(cellIdentifier: "ProductCollectionCell", cellType: ProductCollectionViewCell.self)) { (index, model, cell) in
             
         }.disposed(by: disposeBag)
     }

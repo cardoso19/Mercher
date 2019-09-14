@@ -1,5 +1,5 @@
 //
-//  DateUtil.swift
+//  DateExtension.swift
 //  Basket
 //
 //  Created by Matheus Cardoso kuhn on 11/05/19.
@@ -9,6 +9,7 @@
 import Foundation
 
 extension Date {
+    
     func convertToString(onFormat format: String) -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")

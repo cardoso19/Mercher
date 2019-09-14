@@ -21,7 +21,7 @@ class PlaceOrderViewController: UIViewController {
     @IBOutlet weak var buttonPlaceOrder: UIButton!
     
     //MARK: - Variables
-    var viewModel: PlaceOrderViewModel!
+    var viewModel: PlaceOrderViewModelLogic!
     let disposeBag = DisposeBag()
     
     //MARK: - Life Cycle
@@ -37,6 +37,7 @@ class PlaceOrderViewController: UIViewController {
         labelTotalAmountTitle.text = NSLocalizedString("Total Amount", comment: "")
         buttonPlaceOrder.setTitle(NSLocalizedString("Place Order", comment: ""), for: .normal)
     }
+    
 }
 
 //MARK: - Whitelabel

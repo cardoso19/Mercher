@@ -11,10 +11,10 @@ import Foundation
 struct NSNumberCodable: Codable {
     
     //MARK: - Variables
-    let value: NSNumber?
+    let value: NSNumber
     
     //MARK: - Life Cycle
-    init(value: NSNumber?) {
+    init(value: NSNumber) {
         self.value = value
     }
     
@@ -23,6 +23,6 @@ struct NSNumberCodable: Codable {
     }
     
     func encode(to encoder: Encoder) throws {
-        try value?.doubleValue.encode(to: encoder)
+        try value.doubleValue.encode(to: encoder)
     }
 }

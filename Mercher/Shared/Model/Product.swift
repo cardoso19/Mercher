@@ -10,7 +10,6 @@ import Foundation
 
 struct Product: Codable {
     
-    //MARK: - Variables
     let identifier: Identifier<Product>
     let name: Name<Product>
     let urlIcon: String?

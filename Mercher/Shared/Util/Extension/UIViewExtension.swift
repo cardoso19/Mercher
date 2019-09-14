@@ -1,5 +1,5 @@
 //
-//  ViewUtil.swift
+//  UIViewExtension.swift
 //  Basket
 //
 //  Created by Matheus Cardoso kuhn on 11/05/19.
@@ -9,6 +9,26 @@
 import UIKit
 
 extension UIView {
+    
+    func xib() {
+        let bundle  = Bundle(for: type(of: self))
+        guard
+            let nibName = type(of: self).description().components(separatedBy: ".").last,
+            let view = UINib(nibName: nibName, bundle: bundle).instantiate(withOwner: self, options: nil).first as? UIView
+            else {
+                return
+        }
+        switch bounds {
+        case .zero:
+            frame = view.bounds
+        default:
+            view.frame = bounds
+        }
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addSubview(view)
+        view.layoutIfNeeded()
+    }
+    
     enum Corner {
         case topRight
         case topLeft

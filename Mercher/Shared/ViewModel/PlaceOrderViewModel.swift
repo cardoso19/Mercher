@@ -10,13 +10,18 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class PlaceOrderViewModel {
+protocol PlaceOrderViewModelLogic {
+    var listName: String? { get }
+    init(listName: String?)
+}
+
+class PlaceOrderViewModel: PlaceOrderViewModelLogic {
     
     //MARK: - Variables
-    let listName: String?
+    var listName: String?
     
     //MARK: - Life Cycle
-    init(listName: String?) {
+    required init(listName: String?) {
         self.listName = listName
     }
 }

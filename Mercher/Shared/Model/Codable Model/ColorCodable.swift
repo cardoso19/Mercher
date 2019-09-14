@@ -11,10 +11,10 @@ import UIKit
 struct ColorCodable: Codable {
     
     //MARK: - Variables
-    let value: UIColor?
+    let value: UIColor
     
     //MARK: - Life Cycle
-    init(value: UIColor?) {
+    init(value: UIColor) {
         self.value = value
     }
     
@@ -23,6 +23,6 @@ struct ColorCodable: Codable {
     }
     
     func encode(to encoder: Encoder) throws {
-        try value?.convertToHexString().encode(to: encoder)
+        try value.convertToHexString().encode(to: encoder)
     }
 }

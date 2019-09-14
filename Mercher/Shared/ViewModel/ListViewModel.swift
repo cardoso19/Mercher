@@ -10,16 +10,26 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class ListViewModel {
+protocol ListViewModelLogic {
+    var lists: BehaviorRelay<[List]> { get }
+    var isLoaderVisible: BehaviorRelay<Bool> { get }
+    var noContent: BehaviorRelay<Bool> { get }
+    func described(date: Date?) -> String?
+    func described(days: Int) -> String
+    func described(totalItems: Int) -> String
+    func described(amount: NSNumber) -> String?
+    func requestList()
+    func halfWidth(of rect: CGRect) -> CGFloat
+}
+
+class ListViewModel: ListViewModelLogic {
     
-    //MARK: - Lists
-    let cornerRadius: CGFloat = 6.0
-    let cornersDetail: [UIView.Corner] = [.bottomLeft, .bottomRight]
-    let gradientLocations: [NSNumber] = [0.0, 1.0]
-    let gradientStartPoint = CGPoint(x: 0.0, y: 0.0)
-    let gradientEndPoint = CGPoint(x: 1.0, y: 0.0)
+    //MARK: - Variables
     var lists: BehaviorRelay<[List]> = BehaviorRelay(value: [])
+    var isLoaderVisible: BehaviorRelay<Bool> = BehaviorRelay(value: false)
+    var noContent: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     
+    //MARK: - Presenter
     func described(date: Date?) -> String? {
         return date?.convertToString(onFormat: "d MMM yyyy")
     }
@@ -31,31 +41,19 @@ class ListViewModel {
         } else {
             dayText = NSLocalizedString("Days", comment: "")
         }
-        return String(format: "%.2d", days) + " " + dayText
+        return String(format: "%.2d %@", days, dayText) 
     }
     
     func described(totalItems: Int) -> String {
         return "\(totalItems)"
     }
     
-    func described(amount: NSNumber?) -> String {
-        let errorResponse = "$ -"
-        guard let amount = amount else { return errorResponse }
-        let formatter = NumberFormatter()
-        formatter.locale = Locale.current
-        formatter.numberStyle = .currency
-        return formatter.string(from: amount) ?? errorResponse
+    func described(amount: NSNumber) -> String? {
+        return amount.localizedCurrency()
     }
     
-    func gradient(with color: UIColor) -> [CGColor] {
-        return [color.cgColor, color.withAlphaComponent(0.7).cgColor]
-    }
-    
-    func roudedCorner(on bouds: CGRect) -> CGFloat {
-        return bouds.width / 2
-    }
-    
-    func mockLists() {
+    //MARK: - Request
+    func requestList() {
         var lists: [List] = []
         for index in 0...3 {
             let color: ColorCodable!
@@ -82,5 +80,10 @@ class ListViewModel {
                               paybleAmount: NSNumberCodable(value: NSNumber(value: 127 * (index + 1)))))
         }
         self.lists.accept(lists)
+    }
+    
+    //MARK: - Business
+    func halfWidth(of rect: CGRect) -> CGFloat {
+        return rect.width / 2
     }
 }

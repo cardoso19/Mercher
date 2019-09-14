@@ -13,18 +13,22 @@ import RxSwift
 class ListTableViewController: UITableViewController {
 
     //MARK: - Variables
-    let viewModel = ListViewModel()
-    let disposeBag = DisposeBag()
+    private let viewModel: ListViewModelLogic = ListViewModel()
+    private let disposeBag = DisposeBag()
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = NSLocalizedString("My Lists", comment: "")
         configDataSourceAndDelegate()
+        registerTableViewCell()
         render()
-        viewModel.mockLists()
+        viewModel.requestList()
         observerCellForRow()
         observerDidSelectCell()
+    }
+    
+    private func prepareLayout() {
+        navigationItem.title = NSLocalizedString("My Lists", comment: "")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,6 +41,11 @@ class ListTableViewController: UITableViewController {
         tableView.delegate = nil
         tableView.dataSource = nil
     }
+    
+    func registerTableViewCell() {
+        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "List")
+    }
 
     //MARK: - UITableViewDelegate
     func observerDidSelectCell() {
@@ -47,6 +56,7 @@ class ListTableViewController: UITableViewController {
     
     // MARK: - UITableViewDataSource
     func observerCellForRow() {
+        
         viewModel.lists.bind(to: tableView.rx.items(cellIdentifier: "List", cellType: ListTableViewCell.self)) { index, data, cell in
             // Localization
             cell.labelDueDateTitle.text = NSLocalizedString("Due Date", comment: "")
@@ -56,17 +66,17 @@ class ListTableViewController: UITableViewController {
             cell.labelPayableAmountTitle.text = NSLocalizedString("Payable Amount", comment: "")
             cell.buttonPlaceHorder.setTitle(NSLocalizedString("Place Order", comment: ""), for: .normal)
             
-            // Data Source
-            cell.viewList.add(cornerRadius: self.viewModel.cornerRadius)
-            cell.imageViewUser.add(cornerRadius: self.viewModel.roudedCorner(on: cell.imageViewUser.bounds))
-            cell.viewListDetail.add(cornerRadius: self.viewModel.cornerRadius, on: self.viewModel.cornersDetail)
+            // Layout
+            cell.viewList.add(cornerRadius: 6.0)
+            cell.imageViewUser.add(cornerRadius: self.viewModel.halfWidth(of: cell.imageViewUser.bounds))
+            cell.viewListDetail.add(cornerRadius: 6.0, on: [.bottomLeft, .bottomRight])
             cell.viewList.backgroundColor = .white
-            if let color = data.color.value {
-                cell.viewList.addGradient(with: self.viewModel.gradient(with: color),
-                                          locations: self.viewModel.gradientLocations,
-                                          startPoint: self.viewModel.gradientStartPoint,
-                                          endPoint: self.viewModel.gradientEndPoint)
-            }
+            
+            // Data Source
+            cell.viewList.addGradient(with: [data.color.value.cgColor, data.color.value.withAlphaComponent(0.7).cgColor],
+                                      locations: [0.0, 1.0],
+                                      startPoint: .zero,
+                                      endPoint: CGPoint(x: 1.0, y: 0.0))
             cell.labelPayableAmountValue.textColor = data.color.value
             cell.labelListName.text = data.name.value
             cell.labelDueDateValue.text = self.viewModel.described(date: data.dueDate.value)
@@ -83,6 +93,7 @@ class ListTableViewController: UITableViewController {
 
 //MARK: - Whitelabel
 extension ListTableViewController: Whitelabel {
+    
     func render() {
         
     }
